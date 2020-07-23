@@ -1,0 +1,18 @@
+<% posts.each do |post| %>
+
+
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+  <div class="card text-center card-userprojects">
+    <div class="card-header card-header-userprojects rounded-0">
+      <h3 class="cardname"><%= post.title %></h3>
+
+      <p><%= post.content %></p>
+    </div>
+
+    <div class="card-footer card-footer-userprojects">
+      <div><%= link_to 'Show', post %></div>
+    </div>
+  </div>
+</div>
+
+<% end %>

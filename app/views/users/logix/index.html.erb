@@ -1,0 +1,39 @@
+
+
+
+<div class="container">
+  
+
+  <% if notice %>
+    <div class="row">
+      <div class="alert alert-success alert-dismissible container-fluid text-center">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <%= notice %>
+      </div>
+    </div>
+  <% end %>
+
+
+  <div class ="d-flex flex-column align-items-center flex-md-row justify-content-md-between align-items-md-center">
+    <div class="d-flex flex-row justify-content-center align-items-center">
+      
+      <h2 class="p-4"><%= @user.username %></h2>
+      
+    </div>
+    
+  </div>
+
+  <% if @user.posts.blank? %>
+    <div class ="no-projects px-4">
+      <h5>You don't have any posts. Create one <%= link_to 'here', new_post_path, class: 'no-projects-here' %></h5>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <%= render partial: "dashboard" , locals: {posts: @user.posts} %>
+  </div>
+
+</div>
+<br>
+
+
