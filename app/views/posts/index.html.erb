@@ -1,38 +1,36 @@
 
-<h1>Posts</h1>
 
-<table class="table">
-  <thead>
-    <tr class="table-row">
-      <th class="table-head">Title</th>
-      <th class="table-head">Content</th>
-      <th class="table-head">User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="align-center"><a href="#" class="btn btn--grey btn--animated">Create a new post</a></div>
+<% @posts.each do |post| %>
+  <div class="blog-container">
+  
+  <div class="blog-header">
+    <div class="blog-cover">
+      <div class="blog-author">
+        <h3><%= post.user.username %></h3>
+      </div>
+    </div>
+  </div>
 
-  <tbody class="table-body">
-    <% @posts.each do |post| %>
-      <tr>
-        <td class="table-data"><%= post.title %></td>
-        <td class="table-data"><%= post.content %></td>
-        <td class="table-data"><%= post.user_id %></td>
-        <td class="table-data"><%= link_to 'Show', post %></td>
-        <% if post.user == current_user %>
-          
-          <td class="table-data"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="blog-body">
+    <div class="blog-title">
+      <h1><a href="#"><%= post.title %></a></h1>
+    </div>
+    <div class="blog-summary">
+      <span class="blog-content"><%= truncate(post.content, :length => 450) %></span>
+    </div>
+    
+  </div>
+  
+  <div class="blog-footer">
+    <ul>
+      <li class="published-date"><%= post.created_at %></li>
+      
+    </ul>
+  </div>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
-<% if user_signed_in? %>
-  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'Login', new_user_session_path %>
-  <%= link_to 'Signup', new_user_registration_path %>
+</div>
+  
 <% end %>
+
+

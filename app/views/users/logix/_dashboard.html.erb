@@ -1,6 +1,6 @@
 <% posts.each do |post| %>
 
-
+<% if post.approved || current_user == post.user %>
 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
   <div class="card text-center card-userprojects">
     <div class="card-header card-header-userprojects rounded-0">
@@ -14,5 +14,6 @@
     </div>
   </div>
 </div>
+<% end %>
 
 <% end %>
