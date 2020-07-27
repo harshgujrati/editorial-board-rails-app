@@ -1,0 +1,19 @@
+
+<h1 class="heading-primary--main member-head">Our Team</h1>
+<h1 class="heading-primary--main member-head">Final Year Members</h1>
+<div class="post">
+  <div class="box">
+    <% @members.each do |member| %>
+      <div class="card">
+        <div class="imgBx">
+           <%= image_tag(member.image_url) %>
+        </div>
+        <div class="details">
+            <h2><%= member.name %><br><span>Final Year</span></h2>
+        </div>
+      </div>
+    <% end %>
+       
+  </div>
+</div>
+

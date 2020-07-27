@@ -4,4 +4,8 @@ class HomeController < ApplicationController
 
   def leaderboard
   end
+
+  def member
+  	@members = Member.all
+  end
 end
