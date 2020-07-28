@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -16,19 +16,33 @@
 </p>
 
 
-<p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes' %></p>
+<p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes' %></p> -->
 
-<% if current_user %>
-	<% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
-	<% if pre_like %>
-	  <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete %>
-	<% else %>
-	  <%= button_to 'Like', post_likes_path(@post), method: :post %>
-	<% end %>
+<%= render partial: '/layouts/header2' %>
+
+<div style="width: 710px; margin: 0 auto;" class="u-margin-top-big">
+  <div class="bacon-blog-post bacon-shadow">
+    <img src="http://i2.wp.com/garybacon.com/wp-content/uploads/2016/06/finding_what_challenges.png" class="wp-post-image">
+    <div class="bacon-blog-post-inner">
+      <h2><a href="http://garybacon.com/post/finding-what-challenges-you/" rel="bookmark" title="Permanent link to Finding What Challenges You" class="title-row"><%= @post.title %></a></h2>
+      <p><%= @post.content %></p>
+
+      <p><%= @post.likes.count %> <%= (@post.likes.count) <= 1 ? 'Like' : 'Likes' %></p>
+    </div>
+  </div>
+  <% if current_user %>
+  <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
+  <% if pre_like %>
+    <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete, class: "unlike-link" %>
+  <% else %>
+    <%= button_to 'Like', post_likes_path(@post), method: :post, class: "like-link" %>
+  <% end %>
 <% else %>
   <p>You need to login to like</p>
 <% end %>
 
+  
+<%= link_to "Visit poster's profile", user_posts_path(@post.user.id), class: "poster-profile" %>
+</div>
 
-<%= link_to 'Back', posts_path %>
-<%= link_to 'Poster profile', user_posts_path(@post.user.id) %>
+

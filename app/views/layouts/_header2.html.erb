@@ -1,0 +1,33 @@
+ <nav class="header-area">
+  <!-- site-navbar start -->
+  <div class="navbar-area">
+    <div class="container">
+      <nav class="site-navbar dark-font">
+        <!-- site logo -->
+        <%= image_tag "Logo.png", class: "site-logo" %>
+
+        <!-- site menu/nav -->
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Team", home_member_path %></li>
+          <li><%= link_to "Post", posts_path %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <% if current_user.admin %>
+              <li><%= link_to "Admin Panel", rails_admin_path %></li>
+            <% end %>
+          <% else %>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Signup", new_user_registration_path %></li>
+          <% end %>
+          
+        </ul>
+
+        <!-- nav-toggler for mobile version only -->
+        <button class="nav-toggler">
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </div>
+</nav>

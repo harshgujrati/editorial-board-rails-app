@@ -1,34 +1,15 @@
 .header {
-    height: 85vh;
+    height: 95vh;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)),
-    url(../img/header.jpg);
+    url(asset_path("hero.jpg"));
     background-size: cover;
     background-position: top;
     position: relative;
-    
-
-    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-        border-radius: 0 0 85% 85% / 30%;
-        height: 90vh;
-    }
-
-    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-            only screen and (min-width: 125em) {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-primary-light, 0.8),
-            rgba($color-primary-dark, 0.8)),
-        url(../img/hero.jpg);
-    }
-
-    @include respond(phone) {
-         border-radius: 0 0 85% 85% / 30%;
-        height: 90vh;
-    }
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &__logo-box {
         position: absolute;
@@ -37,7 +18,7 @@
     }
 
     &__logo {
-        height: 6.5rem;
+        height: 3.5rem;
     }
     
     &__text-box {
@@ -48,19 +29,3 @@
         text-align: center;
     }
 }
-::-webkit-scrollbar {
-    width: 12px;
-}
- 
-::-webkit-scrollbar-track {
-    background-color: #ebebeb;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: #6d6d6d; 
-}
-

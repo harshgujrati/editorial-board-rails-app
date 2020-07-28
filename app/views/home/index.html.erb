@@ -1,61 +1,68 @@
 
-        
-        <!-- Header for landing page using clip path -->
-        <header class="header">
 
-  <header class="header-area">
-  <!-- site-navbar start -->
-  <div class="navbar-area">
-    <div class="container">
-      <nav class="site-navbar">
-        <!-- site logo -->
-        <a href="#home" class="site-logo"><%= image_tag("Logo.png", height: 50, width:50) %></a>
+       
+        <header class="header border">
 
-        <!-- site menu/nav -->
-        <ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Blog", posts_path %></li>
-          <li><%= link_to "Member", home_member_path %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-            <% if current_user.admin %>
-                <li><%= link_to "Admin Panel", rails_admin_path %></li>
-            <% end %>
-          <% else %>
-            <li><%= link_to "Login", new_user_session_path %></li>
-            <li><%= link_to "Signup", new_user_registration_path %></li>
-          <% end %>
+           <%= render partial: '/layouts/header1' %>
+            
 
-          
-        </ul>
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main heading-font-alba">The Editorial Board</span>
+                    <span class="heading-primary--sub">Beckoning Creati'wit'y</span>
+                </h1>
 
-        <!-- nav-toggler for mobile version only -->
-        <button class="nav-toggler">
-          <span></span>
-        </button>
-      </nav>
-    </div>
-  </div><!-- navbar-area end -->
-
-  
-</header>
-            <div class="overlay">
-                
-
-                <div class="header__text-box">
-                    <h1 class="heading-primary">
-                        <span class="heading-primary--main heading-font-alba">The Editorial Board</span>
-                        <span class="heading-primary--sub altamonte-nf">Beckoning Creati'wit'y</span>
-                    </h1>
-
-                    <a href="#" class="btn btn--white btn--animated">Let's Discover How</a>
-                </div>
+                <a href="#" class="btn btn--white btn--animated">Let's Discover How</a>
             </div>
         </header>
 
         <main>
             <section class="section-about">
-                <div class="heading-secondary u-margin-bottom-big">What Do we do</div>
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Exciting events for students
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary u-margin-bottom-small">You're really going to enjoy with us</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                            ducimus quam nisi exercitationem omnis earum qui.
+                        </p>
+
+                        <h3 class="heading-tertiary u-margin-bottom-small">Live events like you never have before</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+                        </p>
+
+                        <a href="#" class="btn-text">Learn more &rarr;</a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+
+                            <img srcset="img/section.jpg 300w, img/section.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 1"
+                                 class="composition__photo composition__photo--p1">
+
+                            <img srcset="img/section.jpg 300w, img/section.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 2"
+                                 class="composition__photo composition__photo--p2">
+
+                            <img srcset="img/section.jpg 300w, img/section.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 3"
+                                 class="composition__photo composition__photo--p3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-features">
+                <div class="heading-primary--main u-center-text u-margin-bottom-big font-white">What Do we do</div>
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="feature-box">
@@ -98,8 +105,6 @@
                     </div>
                 </div>
             </section>
-
-           
 
             <section class="section-tours" id="section-tours">
                 <div class="u-center-text u-margin-bottom-big">
@@ -152,7 +157,7 @@
                                     &nbsp;
                                 </div>
                                 <h4 class="showcard__heading">
-                                    <span class="showcard__heading-span showcard__heading-span--3">Malvika</span>
+                                    <span class="showcard__heading-span showcard__heading-span--3">Tiresia</span>
                                 </h4>
                                 <div class="showcard__details">
                                     <ul>
@@ -168,7 +173,7 @@
                             <div class="showcard__side showcard__side--back showcard__side--back-3">
                                 <div class="showcard__cta">
                                     <div class="showcard__about-box">
-                                        <p class="showcard__about-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.</p>
+                                    <p class="showcard__about-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.</p>
                                         
                                     </div>
                                     <a href="#popup" class="btn btn--white">Read now!</a>
@@ -231,61 +236,14 @@
                 
             </section>
 
-            <section class="section-book">
-                <div class="row">
-                    <div class="book">
-                        <div class="book__form">
-                            <form action="#" class="form">
-                                <div class="u-margin-bottom-medium">
-                                    <h2 class="heading-secondary">
-                                       Contact Us
-                                    </h2>
-                                </div>
-
-                                <div class="form__group">
-                                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
-                                    <label for="name" class="form__label">Full name</label>
-                                </div>
-
-                                <div class="form__group">
-                                    <input type="email" class="form__input" placeholder="Email address" id="email" required>
-                                    <label for="email" class="form__label">Email address</label>
-                                </div>
-
-                                <div class="form__group u-margin-bottom-medium">
-                                    <div class="form__radio-group">
-                                        <input type="radio" class="form__radio-input" id="small" name="size">
-                                        <label for="small" class="form__radio-label">
-                                            <span class="form__radio-button"></span>
-                                            Student
-                                        </label>
-                                    </div>
-
-                                    <div class="form__radio-group">
-                                        <input type="radio" class="form__radio-input" id="large" name="size">
-                                        <label for="large" class="form__radio-label">
-                                            <span class="form__radio-button"></span>
-                                            Outsider
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="form__group">
-                                    <button class="btn btn--green">Contact Us &rarr;</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
         </main>
 
         <footer class="footer">
             <div class="footer__logo-box">
 
                 <picture class="footer__logo">
-                    <!-- <img src="Logo.png" alt="Logo" class="header__logo"> -->
-                    <%= image_tag("Logo.png", height: 140, width: 140) %>
+                    <img src="img/Logo.png" alt="Logo" class="header__logo">
                 </picture>
 
 
@@ -409,4 +367,3 @@
         </section>
         -->
 
- 
