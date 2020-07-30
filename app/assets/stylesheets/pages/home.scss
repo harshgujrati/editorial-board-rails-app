@@ -1,6 +1,172 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.profile-image-label {
+  font-size: 20px;
+  color: white;
+  text-decoration: underline;
+}
+
+
+.dashboard-notice {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.user-name {
+  font-size: 26px;
+
+}
+
+.user-mail {
+  font-size: 26px;
+}
+
+.user-image {
+  height: 300px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid black;
+  margin-top: 25px;
+  border-radius: 2px;
+
+}
+
+.user-detail {
+  border: 1px solid #000;
+  background-color: #ddd;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+.check-box-label {
+  display: inline;
+  transform: translateY(-2px);
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.check-box-input {
+  display: inline;
+
+}
+
+
+
+.form-heading {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.custom-form {
+  background: $color-primary;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+form {
+  label {
+    position: relative;
+    display: block;
+    
+    input {
+      font: 18px Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+      display: block;
+      border: none;
+      padding: 20px;
+      width: 300px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      outline: none;
+      transition: all 0.2s ease-in-out;
+      
+      &::placeholder {
+        transition: all 0.2s ease-in-out;
+        color: #999;
+        font: 18px Helvetica, Arial, sans-serif;
+      }
+      
+      &:focus, &.populated {
+        padding-top: 28px;
+        padding-bottom: 12px;
+        
+        &::placeholder {
+          color: transparent;
+        }
+        
+        & + span {
+          opacity: 1;
+          top: 10px;
+        }
+      }
+    }
+    
+    
+  }
+  
+  input[type="submit"] {
+    transition: all 0.2s ease-in-out;
+    font: 18px Helvetica, Arial, sans-serif;
+    border: none;
+    background: $color-grey-dark;
+    color: #fff;
+    padding: 16px 40px;
+    display: block;
+    margin-top: 10px;
+    
+    &:hover {
+      background: $color-grey-dark-2;
+    }
+  }
+}
+
+.form-label {
+      color: blue;
+      font: 13px Helvetica, Arial, sans-serif;
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .fa {
   font-size: 10px !important;
   margin-left: 8px;

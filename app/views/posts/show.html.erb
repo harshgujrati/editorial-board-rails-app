@@ -22,10 +22,15 @@
 
 <div style="width: 710px; margin: 0 auto;" class="u-margin-top-big">
   <div class="bacon-blog-post bacon-shadow">
-    <img src="http://i2.wp.com/garybacon.com/wp-content/uploads/2016/06/finding_what_challenges.png" class="wp-post-image">
+    <!-- <img src="http://i2.wp.com/garybacon.com/wp-content/uploads/2016/06/finding_what_challenges.png" class="wp-post-image"> -->
+    <% if @post.image_url %>
+
+      <%= image_tag @post.image_url, class: "wp-post-image" %>
+
+    <% end %>
     <div class="bacon-blog-post-inner">
-      <h2><a href="http://garybacon.com/post/finding-what-challenges-you/" rel="bookmark" title="Permanent link to Finding What Challenges You" class="title-row"><%= @post.title %></a></h2>
-      <p><%= @post.content %></p>
+      <h2><a href="" class="title-row"><%= @post.title %></a></h2>
+      <p class="blog-content"><%= @post.content %></p>
 
       <p><%= @post.likes.count %> <%= (@post.likes.count) <= 1 ? 'Like' : 'Likes' %></p>
     </div>
@@ -43,6 +48,9 @@
 
   
 <%= link_to "Visit poster's profile", user_posts_path(@post.user.id), class: "poster-profile" %>
+<% if current_user == @post.user %>
+          <span><%= link_to "Delete", post_path(@post), class: "post-delete", method: :delete %></span>
+      <% end %>
 </div>
 
 

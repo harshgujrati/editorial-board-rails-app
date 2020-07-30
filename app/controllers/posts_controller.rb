@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.where(approved: true)
+    @posts = Post.where(approved: true).reverse
   end
 
   # GET /posts/1
@@ -64,7 +64,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :content, :user_id)
+      params.require(:post).permit(:title, :content, :user_id, :image)
     end
 
     def check_approve

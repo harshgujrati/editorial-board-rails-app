@@ -2,30 +2,29 @@
 
 
 <div class="container">
+    <%= render partial: '/layouts/header2' %>
+
+
   
 
-  <% if notice %>
-    <div class="row">
-      <div class="alert alert-success alert-dismissible container-fluid text-center">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <%= notice %>
+
+      <div class="user-detail u-margin-top-big">
+        <% if @user.image_url %>
+          <%= image_tag @user.image_url, class: "user-image" %>
+        <% end %>
+        <h2 class="align-center user-name">Username: <%= @user.username %></h2>
+      <h2 class="align-center user-mail">Email: <%= @user.email %></h2>
       </div>
-    </div>
-  <% end %>
-
-
-  <div class ="d-flex flex-column align-items-center flex-md-row justify-content-md-between align-items-md-center">
-    <div class="d-flex flex-row justify-content-center align-items-center">
       
-      <h2 class="p-4"><%= @user.username %></h2>
+      <h2 class="align-center user-name u-margin-top-big">All posts by <%= @user.username %></h2>
       
-    </div>
+  
     
   </div>
 
   <% if @user.posts.blank? %>
     <div class ="no-projects px-4">
-      <h5>You don't have any posts. Create one <%= link_to 'here', new_post_path, class: 'no-projects-here' %></h5>
+      <h5 class="dashboard-notice">You don't have any posts. Create one <%= link_to 'here', new_post_path, class: 'no-projects-here' %></h5>
     </div>
   <% end %>
 

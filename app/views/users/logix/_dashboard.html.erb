@@ -1,19 +1,39 @@
 <% posts.each do |post| %>
 
 <% if post.approved || current_user == post.user %>
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-  <div class="card text-center card-userprojects">
-    <div class="card-header card-header-userprojects rounded-0">
-      <h3 class="cardname"><%= post.title %></h3>
 
-      <p><%= post.content %></p>
-    </div>
-
-    <div class="card-footer card-footer-userprojects">
-      <div><%= link_to 'Show', post %></div>
+  <div class="blog-container">
+  
+  <div class="blog-header">
+    <div class="blog-cover" style="background-image: url(<%= post.image_url %>);">
+      <div class="blog-author">
+        <h3 style="background-image: url(<%= post.user.image_url %>); background-position: center; background-size: cover; height: 70px; width: 70px; border-radius: 40px; margin-top: 10px;"><%= post.user.username %></h3>
+      </div>
     </div>
   </div>
+
+  <div class="blog-body">
+    <div class="blog-title">
+      <h1><%= link_to post.title, post_path(post) %></h1>
+    </div>
+    <div class="blog-summary">
+      <span class="blog-content"><%= truncate(strip_tags(post.content.to_s), length: 300) %></span>
+    </div>
+    
+  </div>
+  
+  <div class="blog-footer">
+    <ul>
+      <li class="published-date"><%= post.created_at %></li>
+      <% if current_user == post.user %>
+          <li><%= link_to "Delete", post_path(post), class: "post-delete", method: :delete %></li>
+      <% end %>
+    </ul>
+  </div>
+
 </div>
+  
 <% end %>
+
 
 <% end %>

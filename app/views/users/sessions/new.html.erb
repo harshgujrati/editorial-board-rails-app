@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<!-- <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -24,3 +24,38 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+ -->
+<%= render partial: '/layouts/header2' %>
+ <div class="custom-form">
+
+            <h1 class="form-heading">Login</h1>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<form>
+  
+  <label>
+    
+
+    <%= f.label :email, class: "form-label" %><br />
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Email" %>
+  </label>
+
+  <label>
+     <%= f.label :password, class: "form-label" %>
+    
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+
+    
+  </label>
+
+  <% if devise_mapping.rememberable? %>
+    <%= f.label :remember_me, class: "check-box-label" %>
+      <%= f.check_box :remember_me, class: "check-box-input" %>
+      
+   
+<% end %>
+  
+ 
+  <%= f.submit "Login" %>
+</form>
+<% end %>
+</div>
