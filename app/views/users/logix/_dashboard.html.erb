@@ -2,7 +2,7 @@
 
 <% if post.approved || current_user == post.user %>
 
-  <div class="blog-container">
+  <div class="blog-container" style="background: white; border-radius: 5px; ">
   
   <div class="blog-header">
     <div class="blog-cover" style="background-image: url(<%= post.image_url %>);">
@@ -25,6 +25,10 @@
   <div class="blog-footer">
     <ul>
       <li class="published-date"><%= post.created_at %></li>
+      <% if post.approved? %>
+        <p style="margin-top: 9px; margin-right: 5px;">APPROVED<p>
+
+          <% end %>
       <% if current_user == post.user %>
           <li><%= link_to "Delete", post_path(post), class: "post-delete", method: :delete %></li>
       <% end %>

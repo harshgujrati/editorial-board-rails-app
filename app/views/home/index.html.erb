@@ -12,14 +12,14 @@
                     <span class="heading-primary--sub">Beckoning Creati'wit'y</span>
                 </h1>
 
-                <a href="#" class="btn btn--white btn--animated">Let's Discover it</a>
+                <a href="#section01" class="btn btn--white btn--animated">Let's Discover it</a>
             </div>
         </header>
 
         <main>
             <section class="section-about">
                 <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
+                    <h2 class="heading-secondary" id="section01" >
                         Exciting events for students
                     </h2>
                 </div>
@@ -28,34 +28,23 @@
                     <div class="col-1-of-2">
                         <h3 class="heading-tertiary u-margin-bottom-small">You're really going to enjoy with us</h3>
                         <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui.
+                            We conduct manifold events keeping in mind the multidimensional aspects of an individual's personality. The events are well organized that mainly focus on bringing out the hidden potential of a student and help them imbibe confidence.
                         </p>
 
                         <h3 class="heading-tertiary u-margin-bottom-small">Live events like you never have before</h3>
                         <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+                            The events provide realtime experience to the students, and test and help develop their agility, decision-making ability, presence of mind and team coordination.
                         </p>
 
-                        <a href="#" class="btn-text">Learn more &rarr;</a>
+                        
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
 
-                            <img srcset="img/section.jpg 300w, img/section.jpg 1000w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 1"
-                                 class="composition__photo composition__photo--p1">
+                            <%= image_tag("event1.JPG", class: "composition__photo composition__photo--p1" ) %>
 
-                            <img srcset="img/section.jpg 300w, img/section.jpg 1000w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 2"
-                                 class="composition__photo composition__photo--p2">
-
-                            <img srcset="img/section.jpg 300w, img/section.jpg 1000w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 3"
-                                 class="composition__photo composition__photo--p3">
+                            <%= image_tag("event2.JPG", class: "composition__photo composition__photo--p2" ) %>
+                            <%= image_tag("event3.JPG", class: "composition__photo composition__photo--p3" ) %>
                         </div>
                     </div>
                 </div>
@@ -69,7 +58,7 @@
                             <i class="feature-box__icon icon-basic-world"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">Malvika</h3>
                             <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                                Malvika is our annual University magazine encompassing innovative creations, articles and sketches.
                             </p>
                         </div>
                     </div>
@@ -79,7 +68,7 @@
                             <i class="feature-box__icon icon-basic-compass"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">Tiresia</h3>
                             <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                                Tiresia is University's monthly newsletter comprising informative sections and happenings of the month.
                             </p>
                         </div>
                     </div>
@@ -89,7 +78,7 @@
                             <i class="feature-box__icon icon-basic-map"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">Organise events</h3>
                              <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                                 We organise various enriching events that boosts a student's overall personality, performance and skills.
                             </p>
                         </div>
                     </div>
@@ -99,7 +88,7 @@
                             <i class="feature-box__icon icon-basic-heart"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">Abhyudaya</h3>
                             <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                                Abhyudaya is official annual art, literary and cultural fest that is adorned with various exhilarating events for students. 
                             </p>
                         </div>
                     </div>
@@ -128,11 +117,11 @@
                                 </h4>
                                 <div class="showcard__details">
                                     <ul>
-                                        <li>Loreum</li>
-                                        <li>Loreum</li>
-                                        <li>Loreum</li>
-                                        <li>Loreum</li>
-                                        <li>Loreum</li>
+                                        <li>Cover stories</li>
+                                        <li>Articles</li>
+                                        <li>Colloquy</li>
+                                        <li>Photoshoot</li>
+                                        <li>Final Year Contacts</li>
                                     </ul>
                                 </div>
 
@@ -140,10 +129,10 @@
                             <div class="showcard__side showcard__side--back showcard__side--back-2">
                                 <div class="showcard__cta">
                                     <div class="showcard__about-box">
-                                        <p class="showcard__about-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.</p>
+                                        <p class="showcard__about-detail">Malvika is our annual University magazine encompassing innovative creations, articles and sketches.</p>
                                         
                                     </div>
-                                    <a href="#popup" class="btn btn--white">Read now!</a>
+                                    <a href="http://mmmut.ac.in/News_content/30235newsletter_01202020.pdf" class="btn btn--white">Read now!</a>
                                 </div>
                             </div>
                         </div>
@@ -161,11 +150,11 @@
                                 </h4>
                                 <div class="showcard__details">
                                     <ul>
-                                        <li>Loreum</li>
-                                        <li>Loreum</li>
-                                        <li>Loreum</li>
-                                        <li>Loreum</li>
-                                        <li>Loreum</li>
+                                        <li>Tete-a-tete</li>
+                                        <li>Campus Buzz</li>
+                                        <li>Tech Insights</li>
+                                        <li>Articles</li>
+                                        <li>How To? </li>
                                     </ul>
                                 </div>
 
@@ -173,10 +162,10 @@
                             <div class="showcard__side showcard__side--back showcard__side--back-3">
                                 <div class="showcard__cta">
                                     <div class="showcard__about-box">
-                                    <p class="showcard__about-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.</p>
+                                    <p class="showcard__about-detail">Tiresia is University's monthly newsletter comprising informative sections and happenings of the month.</p>
                                         
                                     </div>
-                                    <a href="#popup" class="btn btn--white">Read now!</a>
+                                    <a href="http://mmmut.ac.in/ViewNewsletter.aspx" class="btn btn--white">Read now!</a>
                                 </div>
                             </div>
                         </div>
@@ -195,14 +184,14 @@
 
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
-                        Listen From Our Faculty
+                        Our Faculty Advisors
                     </h2>
                 </div>
 
                 <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="img/sn.jpg" alt="Person on a tour" class="story__img">
+                            <%= image_tag("snsingh.jpeg", class: "story__img") %>
                             <figcaption class="story__caption">S.N Singh</figcaption>
                         </figure>
                         <div class="story__text">
@@ -220,7 +209,7 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="img/bk.jpg" alt="Faculty Advisor" class="story__img">
+                            <%= image_tag("bkpandey.jpeg", class: "story__img") %>
                             <figcaption class="story__caption">B.K Pandey</figcaption>
                         </figure>
                         <div class="story__text">
@@ -244,7 +233,7 @@
             <div class="footer__logo-box">
 
                 <picture class="footer__logo">
-                    <img src="img/Logo.png" alt="Logo" class="header__logo">
+                    <%= image_tag("Logo.png", {:style => "width:100px; margin-x: auto;"}) %>
                 </picture>
 
 
@@ -254,19 +243,19 @@
                 <div class="col-1-of-2">
                     <div class="footer__navigation">
                         <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Loreum</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Loreum</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Loreum</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Loreum</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Loreum</a></li>
+                            <li class="footer__item"><a href="http://mmmut.ac.in/News_content/30235newsletter_01202020.pdf" class="footer__link">MALVIKA</a></li>
+                            <li class="footer__item"><a href="http://www.mmmut.ac.in/News_content/14003newsletter_05102020.pdf" class="footer__link">TIRESIA</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">ABHYUDAYA</a></li>
+                            <li class="footer__item"><a href="http://mmmut.ac.in/" class="footer__link">MMMUT</a></li>
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="col-1-of-2">
                     <p class="footer__copyright">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                        E-mail: literaryedb@mmmut.ac.in<br>
+                        Designed and Developed by: The Editorial Board
+                        Madan Mohan Malaviya University of Technology
                     </p>
                 </div>
             </div>
@@ -274,73 +263,4 @@
 
         
 
-        <!--
-        <section class="grid-test">
-            <div class="row">
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-2-of-3">
-                    Col 2 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-2-of-4">
-                    Col 2 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-3-of-4">
-                    Col 3 of 4
-                </div>
-            </div>
-        </section>
-        -->
-
+    

@@ -42,7 +42,7 @@
 
 .user-detail {
   border: 1px solid #000;
-  background-color: #ddd;
+  background-color: white;
   width: 70vw;
   margin-left: auto;
   margin-right: auto;
@@ -316,7 +316,7 @@ form {
         to right bottom,
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)),
-    url(../img/nat-4.jpg);
+    url("hero1.jpeg");
     background-size: cover;
     transform: skewY(-7deg);
     margin-top: -10rem;
