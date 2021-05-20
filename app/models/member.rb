@@ -4,7 +4,7 @@ class Member < ApplicationRecord
     square: '200x200#',
     medium: '300x300>'
   }
-  validates_attachment :image,
+  validates_attachment :avatar,
                        content_type: { content_type: /\Aimage\/.*\z/ },
                        size: { less_than: 1.megabyte }
 end
