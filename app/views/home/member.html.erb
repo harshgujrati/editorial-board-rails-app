@@ -3,10 +3,11 @@
 <h1 class="member-head align-center u-margin-bottom-big">Final Year Members</h1>
 <div class="member">
   <div class="box">
-    <% @final_year_members.each do |member| %>
+    <%= form_for(@final_year_members, multipart: true) do |member| %>
       <div class="card u-margin-bottom-medium">
         <div class="imgBx">
-           <%= image_tag(member.image_url) %>
+           <%= member.label :avatar %>
+           <%= member.file_field :avatar %>
         </div>
         <div class="details">
             <h2><%= member.name %><br><span>Final Year</span></h2>
@@ -20,10 +21,11 @@
 <h1 class="member-head align-center u-margin-bottom-big">Third Year Members</h1>
 <div class="member">
   <div class="box">
-    <% @third_year_members.each do |member| %>
+    <%= form_for(@third_year_members, multipart: true) do |member| %>
       <div class="card u-margin-bottom-medium">
         <div class="imgBx">
-           <%= image_tag(member.image_url) %>
+           <%= member.label :avatar %>
+           <%= member.file_field :avatar %>
         </div>
         <div class="details">
             <h2><%= member.name %><br><span>Third Year</span></h2>
@@ -37,10 +39,11 @@
 <h1 class="member-head align-center u-margin-bottom-big">Second Year Members</h1>
 <div class="member">
   <div class="box">
-    <% @second_year_members.each do |member| %>
+    <%= form_for(@second_year_members, multipart: true) do |member| %>
       <div class="card u-margin-bottom-medium">
         <div class="imgBx">
-           <%= image_tag(member.image_url) %>
+           <%= member.label :avatar %>
+           <%= member.file_field :avatar %>
         </div>
         <div class="details">
             <h2><%= member.name %><br><span>Second Year</span></h2>
