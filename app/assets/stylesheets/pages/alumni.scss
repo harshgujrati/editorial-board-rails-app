@@ -14,6 +14,7 @@
     position: relative;
     z-index: 1;
     margin-bottom: 30px;
+    margin-top: 45px;
     overflow: hidden;
     background-position: center;
     background-size: cover
@@ -25,7 +26,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background: rgba(34, 48, 96, 0.8);
+    background: rgba(236, 195, 74, 0.75);
     content: "";
     z-index: -1;
     opacity: 0;
@@ -90,18 +91,18 @@
 }
 
 .team__text .team__title h4 {
-    color: #fff;
+    color: #000;
     font-weight: 700;
     margin-bottom: 6px
 }
 
 .team__text .team__title span {
     font-size: 15px;
-    color: #88C417
+    color: #000
 }
 
 .team__text p {
-    color: #e4e4e4;
+    color: #000;
     line-height: 26px;
     opacity: 0;
     visibility: hidden;
@@ -125,7 +126,7 @@
 .team__text .team__social a {
     display: inline-block;
     font-size: 20px;
-    color: #fff;
+    color: #000;
     margin-right: 34px;
     -webkit-transition: all, .3s;
     -o-transition: all, .3s;
@@ -137,7 +138,7 @@
 }
 
 .team__text .team__social a:hover {
-    color: #88C417
+    color: #000
 }
 
 @media(max-width:768px) {
