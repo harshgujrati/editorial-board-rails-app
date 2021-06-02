@@ -5,7 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
 
   # Store files on Amazon S3.
-  config.active_storage.service = :amazon
+  
 
 
   config.paperclip_defaults = {
