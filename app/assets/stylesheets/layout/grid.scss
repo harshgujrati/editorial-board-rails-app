@@ -40,7 +40,7 @@
     }
 
     .col-1-of-3 {
-        width: calc((100% - 3 * #{$gutter-horizontal}) / 3);
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
     }
 
     .col-2-of-3 {
