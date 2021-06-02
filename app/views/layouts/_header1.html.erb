@@ -10,6 +10,7 @@
         <ul>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Team", member_path %></li>
+          <li><%= link_to "Alumni", alumnis_path %></li>
           <li><%= link_to "Post", posts_path %></li>
           <% if user_signed_in? %>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
