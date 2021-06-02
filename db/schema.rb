@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_02_061852) do
+ActiveRecord::Schema.define(version: 2021_06_02_083511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,10 @@ ActiveRecord::Schema.define(version: 2021_06_02_061852) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "approved", default: false
     t.text "image_data"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.bigint "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

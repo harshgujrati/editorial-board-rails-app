@@ -13,9 +13,9 @@ MAX IMAGE SIZE 1MB</p>
   <div class="blog-container" style="background: #f5f5f5; border-radius: 5px; ">
   
   <div class="blog-header">
-    <div class="blog-cover" style="background-image: url(<%= post.image_url %>);">
+    <div class="blog-cover" style="background-image: url(<%= post.avatar.url %>);">
       <div class="blog-author" >
-        <h3 style="background-image: url(<%= post.user.image_url %>); background-position: center; background-size: cover; height: 70px; width: 70px; border-radius: 40px; margin-top: 10px;"><%= post.user.username %></h3>
+        <h3 style="background-image: url(<%= post.user.avatar.url %>); background-position: center; background-size: cover; height: 70px; width: 70px; border-radius: 40px; margin-top: 10px;"><%= post.user.username %></h3>
       </div>
     </div>
   </div>
