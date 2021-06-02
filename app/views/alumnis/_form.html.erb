@@ -1,0 +1,47 @@
+<%= form_with(model: alumni, local: true) do |form| %>
+  <% if alumni.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alumni.errors.count, "error") %> prohibited this alumni from being saved:</h2>
+
+      <ul>
+        <% alumni.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profession %>
+    <%= form.text_field :profession %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facebook_url %>
+    <%= form.text_field :facebook_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linkedin_url %>
+    <%= form.text_field :linkedin_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :twitter_url %>
+    <%= form.text_field :twitter_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

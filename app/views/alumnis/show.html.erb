@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @alumni.name %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @alumni.profession %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @alumni.description %>
+</p>
+
+<p>
+  <strong>Facebook url:</strong>
+  <%= @alumni.facebook_url %>
+</p>
+
+<p>
+  <strong>Linkedin url:</strong>
+  <%= @alumni.linkedin_url %>
+</p>
+
+<p>
+  <strong>Twitter url:</strong>
+  <%= @alumni.twitter_url %>
+</p>
+
+<%= link_to 'Edit', edit_alumni_path(@alumni) %> |
+<%= link_to 'Back', alumnis_path %>
