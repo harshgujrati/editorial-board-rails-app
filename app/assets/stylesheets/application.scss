@@ -1,11 +1,13 @@
 //= require actiontext
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "pages/home";
 @import "pages/likes";
 @import "pages/posts";
+@import "pages/alumni";
 @import "abstracts/functions";
 
 

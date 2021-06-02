@@ -4,7 +4,7 @@ class AlumnisController < ApplicationController
   # GET /alumnis
   # GET /alumnis.json
   def index
-    @alumnis = Alumni.all
+    @alumnis = Alumni.where(approve: true)
   end
 
   # GET /alumnis/1
@@ -69,7 +69,7 @@ class AlumnisController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def alumni_params
-      params.require(:alumni).permit(:name, :profession, :description, :facebook_url, :linkedin_url, :twitter_url)
+      params.require(:alumni).permit(:avatar, :name, :profession, :description, :facebook_url, :linkedin_url, :twitter_url)
     end
 
     def check_admin
