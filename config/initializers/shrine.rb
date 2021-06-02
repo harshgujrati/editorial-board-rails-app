@@ -1,6 +1,15 @@
 require "shrine"
 require "shrine/storage/file_system"
 require "shrine/storage/memory"
+require "shrine/storage/s3"
+
+
+s3 = Shrine::Storage::S3.new(
+  bucket: "my-app", # required 
+  region: "eu-west-1", # required 
+  access_key_id: "abc",
+  secret_access_key: "xyz",
+)
 
 
 if Rails.env.test?

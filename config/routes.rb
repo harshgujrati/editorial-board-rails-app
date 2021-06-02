@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	
-  get 'home/member'
+  get '/member', to: "members#index", as: "member"
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :posts do
     resources :likes
