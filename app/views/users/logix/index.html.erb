@@ -10,10 +10,10 @@
 
 
       <div class="user-detail u-margin-top-big">
-        <% if @user.avatar.url %>
+        
           
           <%= image_tag @user.avatar.url(:square), class: "user-image" %>
-        <% end %>
+        
         <h2 class="align-center user-name">Username: <%= @user.username %></h2>
       <h2 class="align-center user-mail">Email: <%= @user.email %></h2>
       </div>
