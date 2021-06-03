@@ -303,3 +303,47 @@
     left:8%;
   }
 }
+.contained {
+  position: relative;
+  width: 70px;
+  top: 40px;
+  left: 4%;
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.overlayer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(247, 161, 12, 0.7);
+  border-radius: 50%;
+}
+
+.contained:hover .overlayer {
+  opacity: 1;
+}
+
+.text-name {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
