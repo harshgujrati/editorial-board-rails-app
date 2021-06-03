@@ -1,6 +1,6 @@
 // define all UI variable
 
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('turbolinks:load', (event) => {
     const navToggler = document.querySelector('.nav-toggler');
 const navMenu = document.querySelector('.site-navbar ul');
 const navLinks = document.querySelectorAll('.site-navbar a');
