@@ -38,18 +38,19 @@
  -->
  <%= render partial: '/layouts/header2' %>
 
-<div class="container">
-  <div class="row">
+<!-- <div class="container">
+  <div class="row"> -->
     <!-- Single Starts  -->
-    <% @alumnis.each do |alumni| %>
+   <!--  <% @alumnis.each do |alumni| %>
       <div class="col-1-of-3">
       <div class="team__item set-bg" style="background-image: url(<%= alumni.avatar.url(:medium) %>);">
+
         <div class="team__text">
           <div class="team__title">
             <h4><%= alumni.name %></h4>
             <span><%= alumni.profession %></span>
           </div>
-          <p style="word-wrap: break-word;"><%= alumni.description %></p>
+          <p><%= alumni.description %></p>
           <div class="team__social">
             <a href=<%= alumni.facebook_url %>><i class="fa fa-facebook"></i></a>
             <a href=<%= alumni.linkedin_url %>><i class="fa fa-linkedin"></i></a>
@@ -58,7 +59,7 @@
         </div>
       </div>
     </div>
-    <% end %>
+    <% end %> -->
     
     <!-- Single Ends    -->
     <!-- <div class="col-1-of-3">
@@ -99,3 +100,37 @@
     </div>
   </div>
 </div> -->
+
+
+
+
+
+<div class="container">
+    <div class="row">
+      <% @alumnis.each do |alumni| %>
+        <div class="col-md-3 col-sm-6">
+            <div class="our-team">
+                <div class="pic">
+                    
+                    <%= image_tag alumni.avatar.url(:square) %>
+                    <div class="over-layer">
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-title"><%= alumni.name %></h3>
+                    <span class="post"><%= alumni.profession %></span>
+                    <p class="description"><%= alumni.description %></p>
+                </div>
+                <a href="#" class="read">CONTACT ME</a>
+            </div>
+        </div>
+ 
+        <% end %>
+    </div>
+</div>
