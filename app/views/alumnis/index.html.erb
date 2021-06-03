@@ -108,10 +108,11 @@
 <div class="one one-head u-margin-top-big">
   <h1 class="one-head">Alumni Section</h1>
 </div>
-   
+   <div class="container">
+  
       <% @alumnis.each do |alumni| %>
-        <div class="col-lg-4 col-md-6 col-sm-12" style="position: relative;">
-            <div class="our-team " >
+        <div class="col-lg-4 col-md-6 col-sm-12" style="position: relative; height:600px; ">
+            <div class="our-team" >
                 <div class="pic">
                     
                     <%= image_tag alumni.avatar.url(:square) %>
@@ -136,4 +137,5 @@
  
         <% end %>
     </div>
+</div>
 </div>
