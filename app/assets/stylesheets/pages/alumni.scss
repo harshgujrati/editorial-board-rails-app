@@ -151,6 +151,7 @@
 // }
 .our-team {
     margin-top: 45px;
+    width: 80%;
 }
 
 .our-team .pic{
@@ -247,6 +248,7 @@
 .our-team .description{
     font-size: 14px;
     color: #898989;
+    word-wrap: break-word;
 }
 .our-team .read{
     display: inline-block;
