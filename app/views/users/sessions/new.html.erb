@@ -28,7 +28,9 @@
 <%= render partial: '/layouts/header2' %>
  <div class="custom-form">
 
-            <h1 class="form-heading">Login</h1>
+            <div class="one one-head u-margin-top-big">
+  <h1 class="one-head" style="margin-bottom: 50px; font-size: 50px;">Login</h1>
+</div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <form>
   
@@ -54,8 +56,8 @@
    
 <% end %>
   
- 
-  <%= f.submit "Login" %>
+ <div class="u-margin-bottom-big u-margin-top-big">
+  <%= f.submit "Login" %></div>
 </form>
 <% end %>
 </div>

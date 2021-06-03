@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <%= render partial: '/layouts/header2' %>
-<h1 class="jumbotron align-center u-margin-bottom-small u-margin-top-medium">Our Team</h1>
-<h1 class="member-head align-center u-margin-bottom-big u-margin-top-big">Final Year Members</h1>
+
+<div class="one one-head u-margin-top-big">
+  <h1 class="one-head" style="font-size: 56px;">Team Members</h1>
+</div>
+<div class="one one-head u-margin-top-big">
+  <h1 class="one-head">Final Members</h1>
+</div>
 <div class="member">
   <div class="box">
     <% @final_year_members.each do |member| %>
@@ -19,7 +24,9 @@
   </div>
 </div>
 
-<h1 class="member-head align-center u-margin-bottom-big">Third Year Members</h1>
+<div class="one one-head u-margin-top-big">
+  <h1 class="one-head">Third year Members</h1>
+</div>
 <div class="member">
   <div class="box">
     <% @third_year_members.each do |member| %>
@@ -36,7 +43,9 @@
   </div>
 </div>
   
-<h1 class="member-head align-center u-margin-bottom-big">Second Year Members</h1>
+<div class="one one-head u-margin-top-big">
+  <h1 class="one-head">Second Year Members</h1>
+</div>
 <div class="member">
   <div class="box">
     <% @second_year_members.each do |member| %>
