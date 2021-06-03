@@ -20,7 +20,7 @@
 
 <%= render partial: '/layouts/header2' %>
 
-<div style="width: 710px; margin: 0 auto;" class="u-margin-top-big">
+<div class="u-margin-top-big post-show">
   <div class="bacon-blog-post bacon-shadow">
     <!-- <img src="http://i2.wp.com/garybacon.com/wp-content/uploads/2016/06/finding_what_challenges.png" class="wp-post-image"> -->
     <% if @post.avatar.url %>
@@ -52,5 +52,8 @@
           <span><%= link_to "Delete", post_path(@post), class: "post-delete", method: :delete %></span>
       <% end %>
 </div>
+
+
+
 
 

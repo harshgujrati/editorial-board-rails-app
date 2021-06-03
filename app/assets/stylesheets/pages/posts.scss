@@ -1,8 +1,8 @@
 .bckg {
   background-image: linear-gradient(
         to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8));
+        rgba(214, 212, 207, 0.80),
+        rgba(253, 253, 253, 0.80));
   padding: 20px;
   margin-right: 8px;
 }
@@ -157,8 +157,6 @@
 }
 
 
-
-
 .bacon-blog-post {
   position: relative;
   width: 100%;
@@ -268,4 +266,40 @@
 
 .blog-content {
   font-size: 16px;
+}
+
+
+.post-show {
+  
+  // box-shadow:  0 15px 20px -2px;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 100;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  position: relative;
+
+ 
+  @media screen and (min-width: 280px) {
+    width: 100vw;
+    height: 520px;
+    left: 14%;
+  }
+  @media screen and (min-width: 480px) {
+    width: 100vw;
+    height: 520px;
+    left:14%;
+  }
+  @media screen and (min-width: 767px) {
+    width: 90vw;
+    height: 500px;
+    left:6%;
+  }
+  @media screen and (min-width: 959px) {
+    width: 95vw;
+    height: 500px;
+    left:8%;
+  }
 }
