@@ -109,16 +109,17 @@
    
       <% @alumnis.each do |alumni| %>
         <div class="col-lg-4 col-md-6 col-sm-12" style="position: relative;">
-            <div class="our-team">
+            <div class="our-team " >
                 <div class="pic">
                     
                     <%= image_tag alumni.avatar.url(:square) %>
                     <div class="over-layer">
-                        <ul class="social-links">
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <ul class="social-links li-link">
+                            <li><%= link_to "",  alumni.linkedin_url, :target => "_blank", :class => "fa fa-linkedin style-link" %></li>
+                            <li><%= link_to "",  alumni.facebook_url, :target => "_blank", :class => "fa fa-facebook style-link" %></li>
+                            <li><%= link_to "",  alumni.twitter_url, :target => "_blank", :class => "fa fa-twitter style-link" %></li>
+                            
+                            
                         </ul>
                     </div>
                 </div>

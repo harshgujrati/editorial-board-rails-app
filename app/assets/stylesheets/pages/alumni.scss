@@ -152,7 +152,7 @@
 .our-team {
     margin-top: 45px;
     width: 70%;
-    padding: 30px;
+    padding: 5px;
     position: absolute;
     left: 15%;
     border-style: solid;
@@ -217,15 +217,12 @@
     display: inline-block;
     margin-left: 5px;
 }
-.our-team .social-links li a{
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    display: block;
-    font-size: 13px;
+.style-link{
+    
+    display: inline-block;
+    font-size: 20px !important;
     color: #fff;
-    background: rgba(11, 32, 56, 0.7);
+    
 }
 .our-team .team-content{
     background: rgba(255, 106, 0, 0.7);
