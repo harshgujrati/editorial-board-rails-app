@@ -1,6 +1,6 @@
 class AlumnisController < ApplicationController
   before_action :set_alumni, only: [:show, :edit, :update, :destroy]
-  before_action :check_admin, only: [:edit, :update, :destroy, :new]
+  before_action :check_admin, only: [:edit, :update, :destroy]
   # GET /alumnis
   # GET /alumnis.json
   def index

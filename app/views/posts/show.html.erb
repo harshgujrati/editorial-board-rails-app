@@ -38,16 +38,17 @@
   <% if current_user %>
   <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
   <% if pre_like %>
-    <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete, class: "unlike-link" %>
+    <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete, class: "btn btn--grey u-margin-bottom-medium" %>
   <% else %>
-    <%= button_to 'Like', post_likes_path(@post), method: :post, class: "like-link" %>
+    <%= button_to 'Like', post_likes_path(@post), method: :post, class: "btn btn--grey u-margin-bottom-medium" %>
   <% end %>
 <% else %>
-  <p>You need to login to like</p>
+  <p style="color: red;
+  font-size: 20px; margin-top: 16px; ">Please login to like the post</p>
 <% end %>
 
   
-<%= link_to "Visit poster's profile", user_posts_path(@post.user.id), class: "poster-profile" %>
+<%= link_to "Visit poster's profile", user_posts_path(@post.user.id), class: "btn btn--grey u-margin-bottom-medium"  %>
 <% if current_user == @post.user %>
           <span><%= link_to "Delete", post_path(@post), class: "post-delete", method: :delete %></span>
       <% end %>
