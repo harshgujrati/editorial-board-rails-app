@@ -6,6 +6,10 @@ body {
     color: $color-grey-dark;
 }
 
+@font-face {
+   font-family: 'Segoe Print';
+   src: url('segoeprint.ttf');
+}
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
