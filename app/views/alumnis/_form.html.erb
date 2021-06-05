@@ -1,5 +1,13 @@
-<%= form_with(model: alumni, local: true) do |form| %>
-  <% if alumni.errors.any? %>
+
+<%= render partial: '/layouts/header2' %>
+<div class="custom-form">
+
+            <div class="one one-head u-margin-top-big">
+  <h1 class="one-head" style="color: black; font-size: 50px; margin-top: 50px; margin-bottom: 50px;">Alumni Registration</h1>
+</div>
+<p style="text-align: center; font-size: 20px;">Details will be updated once approved</p>
+<%= form_with(model: alumni, local: true) do |f| %>
+<% if alumni.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(alumni.errors.count, "error") %> prohibited this alumni from being saved:</h2>
 
@@ -10,38 +18,55 @@
       </ul>
     </div>
   <% end %>
+<form>
+  <label>
+    <%= f.label :Name, class: "form-label" %><br />
+    <%= f.text_field :name, placeholder: "Username",autocomplete: "username", id: "fname" %>
+  </label>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+  <label>
+    <%= f.label :Profession, class: "form-label" %><br />
+    <%= f.text_field :profession, placeholder: "Profession",autocomplete: "username", id: "fname" %>
+  </label>
 
-  <div class="field">
-    <%= form.label :profession %>
-    <%= form.text_field :profession %>
-  </div>
+  <label>
+    <%= f.label :Description, class: "form-label" %><br />
+    <%= f.text_area :description, placeholder: "Description",autocomplete: "username", id: "fname" %>
+  </label>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+  <label>
+    <%= f.label :Facebook_Profile_Link, class: "form-label" %><br />
+    <%= f.text_field :facebook_url, placeholder: "",autocomplete: "username", id: "fname" %>
+  </label>
 
-  <div class="field">
-    <%= form.label :facebook_url %>
-    <%= form.text_field :facebook_url %>
-  </div>
+  <label>
+    <%= f.label :LinkedIn_Profile_Link, class: "form-label" %><br />
+    <%= f.text_field :linkedin_url, placeholder: "",autocomplete: "username", id: "fname" %>
+  </label>
 
-  <div class="field">
-    <%= form.label :linkedin_url %>
-    <%= form.text_field :linkedin_url %>
-  </div>
 
-  <div class="field">
-    <%= form.label :Email %>
-    <%= form.text_field :twitter_url %>
-  </div>
+  
+  <label>
+    
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%= f.label :email, class: "form-label" %><br />
+    <%= f.email_field :twitter_url, autocomplete: "email", placeholder: "Email" %>
+  </label>
+
+  
+
+  
+
+  <label>
+    <p class="profile-image-label">Upload Profile Image</p>
+    
+    <%= f.file_field :avatar %>
+
+    
+  </label>
+ <div class="u-margin-bottom-big ">
+  <%= f.submit "Register" %>
+</div>
+</form>
 <% end %>
+</div>
