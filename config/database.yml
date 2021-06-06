@@ -87,5 +87,5 @@ test:
 production:
   <<: *default
   database: editorialboard_production
-  username: editorialboard
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  username: deploy
+  password: Rails.application.credentials.dig(:production, :db_password)
