@@ -5,7 +5,7 @@ require 'capistrano-db-tasks'
 #FIXME add your app name here
 set :application, 'editorial_board'
 #FIXME replace 'git@github.com:YOUR-GIT-REPO-HERE' with your git clone url
-set :repo_url, 'git@github.com:braintrust-digital/aws-rails-cap-deploy.git'
+set :repo_url, 'git@github.com:harshgujrati/editorial-board-rails-app.git'
 #FIXME add location on the server here
 set :deploy_to, '/home/deploy/editorial_board'
 set :branch, ENV['BRANCH'] if ENV['BRANCH']
