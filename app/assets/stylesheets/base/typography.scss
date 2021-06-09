@@ -22,7 +22,8 @@ body {
         font-size: 5rem;
         font-weight: 600;
         letter-spacing: .75rem;
-        
+        position: relative;
+        top: 20px;
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
@@ -43,13 +44,17 @@ body {
         font-weight: 700;
         letter-spacing: 0.5rem;
         animation: moveInRight 1s ease-out;
-
+        position: relative;
+        top:30px;
         @include respond(phone) {
             letter-spacing: .5rem;
         }
     }
 }
-
+.pos-rel{
+    position: relative;
+        top:20px;
+}
 .heading-secondary {
     font-size: 3.5rem;
     text-transform: uppercase;
