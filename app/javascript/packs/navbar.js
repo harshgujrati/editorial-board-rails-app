@@ -8,6 +8,8 @@ const navLinks = document.querySelectorAll('.site-navbar a');
 // load all event listners
 allEventListners();
 
+console.log('**** Contributions are welcome on https://github.com/harshgujrati/editorial-board-rails-app. Feel free to contact: harsh.g225566@gmail.com. ****')
+
 // functions of all event listners
 function allEventListners() {
   // toggler icon click event
