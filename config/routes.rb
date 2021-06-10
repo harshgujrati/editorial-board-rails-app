@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 	
   resources :alumnis
   get '/member', to: "members#index", as: "member"
+  get '/sitemap' => 'sitemaps#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :posts do
     resources :likes
