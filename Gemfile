@@ -26,7 +26,7 @@ gem 'rails_admin', '~> 2.0'
 gem 'shrine'
 gem 'trix'
 # Use Active Storage variant
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem 'paperclip'
 gem 'aws-sdk-s3'
 
